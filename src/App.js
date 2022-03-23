@@ -2,6 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import { Home } from './components/Home';
 import { ContactUs } from './components/ContactUs';
+import { Route, Routes } from 'react-router-dom';
+import { Movies } from './components/Movies';
+import {MainMenu} from './components/MainMenu';
+import { MovieDetails } from './components/MovieDetails';
 
 function App() {
   // var name = "Vidit"
@@ -36,9 +40,14 @@ function App() {
   // }
   return (
     <div className = "App">
-      <h1>APP JS</h1>
+      <MainMenu/>
+      <Routes>
+          <Route path='/movies' element={<Movies/>}></Route>
+          <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route>
+      </Routes>
+      {/* <h1>APP JS</h1>
       <Home  students = {students}/>
-      <ContactUs name = {name} x = {x}/>
+      <ContactUs name = {name} x = {x}/> */}
         {/* <h1>Hello</h1>
         <h2>{name}</h2>
         <h3>no is = {a + b}</h3>

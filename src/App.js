@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Movies } from './components/Movies';
 import {MainMenu} from './components/MainMenu';
 import { MovieDetails } from './components/MovieDetails';
+import { AddEmployee } from './components/AddEmployee';
 
 function App() {
   // var name = "Vidit"
@@ -40,10 +41,11 @@ function App() {
   // }
   return (
     <div className = "App">
-      <MainMenu/>
+      {/* <MainMenu/> */}
+      {<AddEmployee/>}
       <Routes>
-          <Route path='/movies' element={<Movies/>}></Route>
-          <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route>
+          {/* <Route path='/movies' element={<Movies/>}></Route>
+          <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route> */}
       </Routes>
       {/* <h1>APP JS</h1>
       <Home  students = {students}/>

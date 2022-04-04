@@ -7,6 +7,9 @@ import { Movies } from './components/Movies';
 import {MainMenu} from './components/MainMenu';
 import { MovieDetails } from './components/MovieDetails';
 import { AddEmployee } from './components/AddEmployee';
+import { TicketList } from './components/TicketList';
+import { useState } from 'react'
+import { AddTicket } from './components/AddTicket';
 
 function App() {
   // var name = "Vidit"
@@ -39,10 +42,32 @@ function App() {
   // function run(){
   //   alert("this is alert box")
   // }
+
+  const [tickets, setTickets] = useState([
+    {
+      name : "Login Bug",
+      desc : "Resolve Login bug for user"
+    },
+    { 
+      name : "Logout Bug",
+      desc : "Resolve Logout bug for user"
+    }
+  ])    
+
+  const deleteTicket = (ticket)=>{
+    setTickets(tickets.filter(t=>t.name !== ticket.name))
+  }
+
+  const addTicket = (ticket)=>{
+    setTickets([...tickets,ticket])
+  }
+
   return (
     <div className = "App">
+      <AddTicket addTicket={addTicket}/>
+      <TicketList ticket={tickets}  deleteTicket = {deleteTicket}/>
       {/* <MainMenu/> */}
-      {<AddEmployee/>}
+      {/* {<AddEmployee/>} */}
       <Routes>
           {/* <Route path='/movies' element={<Movies/>}></Route>
           <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route> */}

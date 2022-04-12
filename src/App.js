@@ -11,6 +11,7 @@ import { TicketList } from './components/TicketList';
 import { useState } from 'react'
 import { AddTicket } from './components/AddTicket';
 import { SimpleForm } from './components/SimpleForm';
+import { Users } from './components/Users';
 
 function App() {
   // var name = "Vidit"
@@ -65,7 +66,8 @@ function App() {
 
   return (
     <div className = "App">
-      <SimpleForm />
+      {/* <SimpleForm /> */}
+      <Users/>
       {/* <AddTicket addTicket={addTicket}/>
       <TicketList ticket={tickets}  deleteTicket = {deleteTicket}/> */}
       {/* <MainMenu/> */}

@@ -41,7 +41,7 @@ export const Products = () => {
                 pauseOnFocusLoss
                 draggable
                 pauseOnHover
-    />
+            />
     {/* Same as */}
     <ToastContainer />
 
@@ -62,7 +62,7 @@ export const Products = () => {
                     <input type="submit" value="Submit" />
                 </div>
                 
-            </form>
+        </form>
     </div>
   )
 }

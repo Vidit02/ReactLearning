@@ -14,6 +14,7 @@ import { SimpleForm } from './components/SimpleForm';
 import { Users } from './components/Users';
 import { Products } from './components/Products';
 import { Productlist } from './components/Productlist';
+import { UpdateProduct } from './components/UpdateProduct';
 
 function App() {
   // var name = "Vidit"
@@ -79,6 +80,7 @@ function App() {
       <Routes>
           {/* <Route path='/movies' element={<Movies/>}></Route>
           <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route> */}
+          <Route path='/updateproduct/:id' element={<UpdateProduct/>} ></Route>
       </Routes>
       {/* <h1>APP JS</h1>
       <Home  students = {students}/>

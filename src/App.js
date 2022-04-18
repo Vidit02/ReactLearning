@@ -15,6 +15,9 @@ import { Users } from './components/Users';
 import { Products } from './components/Products';
 import { Productlist } from './components/Productlist';
 import { UpdateProduct } from './components/UpdateProduct';
+import { AddMovie } from './components/MoviesApi/AddMovie';
+import { ListMovies } from './components/MoviesApi/ListMovies';
+import { UpdateMovie } from './components/MoviesApi/UpdateMovie';
 
 function App() {
   // var name = "Vidit"
@@ -69,9 +72,12 @@ function App() {
 
   return (
     <div className = "App">
+      <AddMovie/> <br></br>
+      <ListMovies/>
+      {/* <Products/> */}
       {/* <SimpleForm /> */}
-      <Products/>
-      <Productlist/>
+      {/* <Products/> */}
+      {/* <Productlist/> */}
       {/* <Users/> */}
       {/* <AddTicket addTicket={addTicket}/>
       <TicketList ticket={tickets}  deleteTicket = {deleteTicket}/> */}
@@ -80,7 +86,8 @@ function App() {
       <Routes>
           {/* <Route path='/movies' element={<Movies/>}></Route>
           <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route> */}
-          <Route path='/updateproduct/:id' element={<UpdateProduct/>} ></Route>
+          {/* <Route path='/updateproduct/:id' element={<UpdateProduct/>} ></Route> */}
+          <Route path='/updatemovie/:id' element={<UpdateMovie/>}></Route>
       </Routes>
       {/* <h1>APP JS</h1>
       <Home  students = {students}/>

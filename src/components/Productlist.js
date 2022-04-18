@@ -9,6 +9,7 @@ export const Productlist = () => {
     const getProducts = async () => {
         await axios.get("https://healthy-me-rest-api.herokuapp.com/products").then((res) => {
             setproducts(res.data.data)
+            console.log("this is  : " + products);
         })
     }
 
@@ -70,7 +71,7 @@ export const Productlist = () => {
                                 <td>{product.name}</td>
                                 <td>{product.price}</td>
                                 <td>{product.qty}</td>
-                                <td><button className="btn btn-outline-danger" onClick={() => { deleteProduct(product.productId) }}>Delete Product</button></td>
+                                <td><button className="btn btn-outline-danger" onClick={() => {deleteProduct(product.productId) }}>Delete Product</button></td>
                                 <td><Link to={`/UpdateProduct/${product.productId}`} className="btn btn-outline-primary">Update Product</Link></td>
                             </tr>
                             )

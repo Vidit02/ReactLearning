@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
     export const ListMovies = () => {
+        const [movies, setMovies] = useState([])
         const config = {
             headers: {
                 'accept': 'application/json',
@@ -86,5 +87,3 @@ import 'react-toastify/dist/ReactToastify.css';
             </div>
         )
     }
-
-export default getMovies

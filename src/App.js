@@ -18,6 +18,7 @@ import { UpdateProduct } from './components/UpdateProduct';
 import { AddMovie } from './components/MoviesApi/AddMovie';
 import { ListMovies } from './components/MoviesApi/ListMovies';
 import { UpdateMovie } from './components/MoviesApi/UpdateMovie';
+import { FileUpload } from './FileUpload';
 
 function App() {
   // var name = "Vidit"
@@ -72,8 +73,9 @@ function App() {
 
   return (
     <div className = "App">
-      <AddMovie/> <br></br>
-      <ListMovies/>
+      {/* <AddMovie/> <br></br>
+      <ListMovies/> */}
+      <FileUpload/>
       {/* <Products/> */}
       {/* <SimpleForm /> */}
       {/* <Products/> */}
@@ -87,7 +89,7 @@ function App() {
           {/* <Route path='/movies' element={<Movies/>}></Route>
           <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route> */}
           {/* <Route path='/updateproduct/:id' element={<UpdateProduct/>} ></Route> */}
-          <Route path='/updatemovie/:id' element={<UpdateMovie/>}></Route>
+          {/* <Route path='/updatemovie/:id' element={<UpdateMovie/>}></Route> */}
       </Routes>
       {/* <h1>APP JS</h1>
       <Home  students = {students}/>

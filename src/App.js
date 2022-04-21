@@ -18,9 +18,9 @@ import { UpdateProduct } from './components/UpdateProduct';
 import { AddMovie } from './components/MoviesApi/AddMovie';
 import { ListMovies } from './components/MoviesApi/ListMovies';
 import { UpdateMovie } from './components/MoviesApi/UpdateMovie';
-import { FileUpload } from './FileUpload';
 import { Table } from '@material-ui/core';
 import { TableDemo } from './mui/TableDemo';
+import { FileUpload } from './components/FileUpload';
 
 function App() {
   // var name = "Vidit"
@@ -77,8 +77,8 @@ function App() {
     <div className = "App">
       {/* <AddMovie/> <br></br>
       <ListMovies/> */}
-      {/* <FileUpload/> */}
-      <TableDemo/>
+      <FileUpload/>
+      {/* <TableDemo/> */}
       {/* <Products/> */}
       {/* <SimpleForm /> */}
       {/* <Products/> */}

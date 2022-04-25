@@ -4,7 +4,7 @@ import { Home } from './components/Home';
 import { ContactUs } from './components/ContactUs';
 import { Route, Routes } from 'react-router-dom';
 import { Movies } from './components/Movies';
-import {MainMenu} from './components/MainMenu';
+import { MainMenu } from './components/MainMenu';
 import { MovieDetails } from './components/MovieDetails';
 import { AddEmployee } from './components/AddEmployee';
 import { TicketList } from './components/TicketList';
@@ -21,6 +21,9 @@ import { UpdateMovie } from './components/MoviesApi/UpdateMovie';
 import { Table } from '@material-ui/core';
 import { TableDemo } from './mui/TableDemo';
 import { FileUpload } from './components/FileUpload';
+import { LoginRoute } from './components/protectedrout/LoginRoute';
+import { ListUsers } from './components/protectedrout/ListUsers';
+import { My404Component } from './components/My404Component';
 
 function App() {
   // var name = "Vidit"
@@ -33,19 +36,19 @@ function App() {
   // }
   var students = [{
     name: "abc",
-    age : 23,
+    age: 23,
     gender: "male"
-  },{
+  }, {
     name: "xyz",
-    age : 25,
+    age: 25,
     gender: "female"
-  },{
+  }, {
     name: "vraj",
-    age : 40,
+    age: 40,
     gender: "male"
-  },{
+  }, {
     name: "Ram",
-    age : 28,
+    age: 28,
     gender: "male"
   }]
   var name = "Royal"
@@ -56,31 +59,32 @@ function App() {
 
   const [tickets, setTickets] = useState([
     {
-      name : "Login Bug",
-      desc : "Resolve Login bug for user"
+      name: "Login Bug",
+      desc: "Resolve Login bug for user"
     },
-    { 
-      name : "Logout Bug",
-      desc : "Resolve Logout bug for user"
+    {
+      name: "Logout Bug",
+      desc: "Resolve Logout bug for user"
     }
-  ])    
+  ])
 
-  const deleteTicket = (ticket)=>{
-    setTickets(tickets.filter(t=>t.name !== ticket.name))
+  const deleteTicket = (ticket) => {
+    setTickets(tickets.filter(t => t.name !== ticket.name))
   }
 
-  const addTicket = (ticket)=>{
-    setTickets([...tickets,ticket])
+  const addTicket = (ticket) => {
+    setTickets([...tickets, ticket])
   }
 
   return (
-    <div className = "App">
+    <div className="App">
       {/* <AddMovie/> <br></br>
       <ListMovies/> */}
-      <FileUpload/>
+      {/* <FileUpload/> */}
       {/* <TableDemo/> */}
       {/* <Products/> */}
       {/* <SimpleForm /> */}
+      <LoginRoute />
       {/* <Products/> */}
       {/* <Productlist/> */}
       {/* <Users/> */}
@@ -89,15 +93,22 @@ function App() {
       {/* <MainMenu/> */}
       {/* {<AddEmployee/>} */}
       <Routes>
-          {/* <Route path='/movies' element={<Movies/>}></Route>
+        {/* <Route path='/movies' element={<Movies/>}></Route>
           <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route> */}
-          {/* <Route path='/updateproduct/:id' element={<UpdateProduct/>} ></Route> */}
-          {/* <Route path='/updatemovie/:id' element={<UpdateMovie/>}></Route> */}
+        {/* <Route path='/updateproduct/:id' element={<UpdateProduct/>} ></Route> */}
+        {/* <Route path='/updatemovie/:id' element={<UpdateMovie/>}></Route> */}
+        {
+          sessionStorage.getItem('email') !== null ?
+            <Route path='/listusers' element={<ListUsers />}></Route>
+            : "/"
+        }
+        <Route path='*' element={<My404Component/>} />
+        <Route path='/' element={<AddEmployee/>} />
       </Routes>
       {/* <h1>APP JS</h1>
       <Home  students = {students}/>
       <ContactUs name = {name} x = {x}/> */}
-        {/* <h1>Hello</h1>
+      {/* <h1>Hello</h1>
         <h2>{name}</h2>
         <h3>no is = {a + b}</h3>
         <button></button> */}

@@ -22,7 +22,13 @@ export const CartComponent = (props) => {
                                     <td>{product.productName}</td>
                                     <td>{product.price}</td>
                                     <td>
-                                        <button className='btn btn-outline-danger' onClick={()=>props.removeFromCartHandler(product)}>Remove From Cart</button></td>
+                                        <button className='btn btn-outline-success' onClick={()=>props.addToCartHandler({productName : product.productName , price: product.price})}>+ </button>
+                                        &nbsp;
+                                        {product.qty}
+                                        &nbsp;
+                                        <button className='btn btn-outline-danger' onClick={()=>props.removeFromCartHandler({productName : product.productName , price: product.price})}>-</button>
+                                    </td>
+
                                 </tr>
                             )
                         })

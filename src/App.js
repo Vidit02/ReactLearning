@@ -24,6 +24,8 @@ import { FileUpload } from './components/FileUpload';
 import { LoginRoute } from './components/protectedrout/LoginRoute';
 import { ListUsers } from './components/protectedrout/ListUsers';
 import { My404Component } from './components/My404Component';
+import { QueryDemo } from './query/QueryDemo';
+import { QueryDemo2 } from './query/QueryDemo2';
 
 function App() {
   // var name = "Vidit"
@@ -84,7 +86,7 @@ function App() {
       {/* <TableDemo/> */}
       {/* <Products/> */}
       {/* <SimpleForm /> */}
-      <LoginRoute />
+      {/* <LoginRoute /> */}
       {/* <Products/> */}
       {/* <Productlist/> */}
       {/* <Users/> */}
@@ -92,19 +94,21 @@ function App() {
       <TicketList ticket={tickets}  deleteTicket = {deleteTicket}/> */}
       {/* <MainMenu/> */}
       {/* {<AddEmployee/>} */}
-      <Routes>
+      <QueryDemo2/>
+      {/* <QueryDemo/> */}
+      {/* <Routes> */}
         {/* <Route path='/movies' element={<Movies/>}></Route>
           <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route> */}
         {/* <Route path='/updateproduct/:id' element={<UpdateProduct/>} ></Route> */}
         {/* <Route path='/updatemovie/:id' element={<UpdateMovie/>}></Route> */}
-        {
+        {/* {
           sessionStorage.getItem('email') !== null ?
             <Route path='/listusers' element={<ListUsers />}></Route>
             : "/"
         }
         <Route path='*' element={<My404Component/>} />
         <Route path='/' element={<AddEmployee/>} />
-      </Routes>
+      </Routes> */}
       {/* <h1>APP JS</h1>
       <Home  students = {students}/>
       <ContactUs name = {name} x = {x}/> */}

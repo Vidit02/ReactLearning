@@ -26,6 +26,7 @@ import { ListUsers } from './components/protectedrout/ListUsers';
 import { My404Component } from './components/My404Component';
 import { QueryDemo } from './query/QueryDemo';
 import { QueryDemo2 } from './query/QueryDemo2';
+import { QueryDemo3 } from './query/QueryDemo3';
 
 function App() {
   // var name = "Vidit"
@@ -94,8 +95,9 @@ function App() {
       <TicketList ticket={tickets}  deleteTicket = {deleteTicket}/> */}
       {/* <MainMenu/> */}
       {/* {<AddEmployee/>} */}
-      <QueryDemo2/>
+      {/* <QueryDemo2/> */}
       {/* <QueryDemo/> */}
+      <QueryDemo3/>
       {/* <Routes> */}
         {/* <Route path='/movies' element={<Movies/>}></Route>
           <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route> */}

@@ -50,7 +50,6 @@ export const QueryDemo = () => {
                     :
                     <h1>It is success</h1>
             }
-
         </div>
     )
 }

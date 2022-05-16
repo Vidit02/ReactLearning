@@ -27,6 +27,7 @@ import { My404Component } from './components/My404Component';
 import { QueryDemo } from './query/QueryDemo';
 import { QueryDemo2 } from './query/QueryDemo2';
 import { QueryDemo3 } from './query/QueryDemo3';
+import { QueryDemo4 } from './query/QueryDemo4';
 
 function App() {
   // var name = "Vidit"
@@ -97,7 +98,8 @@ function App() {
       {/* {<AddEmployee/>} */}
       {/* <QueryDemo2/> */}
       {/* <QueryDemo/> */}
-      <QueryDemo3/>
+      {/* <QueryDemo3/> */}
+      <QueryDemo4/>
       {/* <Routes> */}
         {/* <Route path='/movies' element={<Movies/>}></Route>
           <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route> */}

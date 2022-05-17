@@ -1,5 +1,6 @@
 import React from 'react'
 import { isError } from 'react-query';
+import { ClipLoader } from 'react-spinners';
 import { useAddData } from '../service/QueryService4'
 
 export const QueryDemo4 = () => {
@@ -10,14 +11,19 @@ export const QueryDemo4 = () => {
             name: "Rohit",
             job : "Cricketer"
         }
-        res.mutate(data)
+        res.mutate(data,{
+            onSettled: () =>{
+             console.log("On Settled is called");   
+            },
+        })
         console.log(res);
     }
   return (
     <div>
         {
-            res.isIdle || res.isLoading ? <button onClick={submit}>Add Data</button>
-                : <button disabled>Data Loaded</button>
+            res.isLoading ?  <ClipLoader />
+                :  res.isSuccess ? <button className='btn btn-success' disabled>Data Loaded</button>
+                :  <button className='btn btn-outline-primary' onClick={submit}>Add Data</button>    
         }
     </div>
   )

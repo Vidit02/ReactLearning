@@ -24,7 +24,7 @@ import { FileUpload } from './components/FileUpload';
 import { LoginRoute } from './components/protectedrout/LoginRoute';
 import { ListUsers } from './components/protectedrout/ListUsers';
 import { My404Component } from './components/My404Component';
-import { QueryDemo } from './query/QueryDemo';
+import { QueryDemo } from './stock/QueryDemo';
 import { QueryDemo2 } from './query/QueryDemo2';
 import { QueryDemo3 } from './query/QueryDemo3';
 import { QueryDemo4 } from './query/QueryDemo4';
@@ -99,7 +99,8 @@ function App() {
       {/* <QueryDemo2/> */}
       {/* <QueryDemo/> */}
       {/* <QueryDemo3/> */}
-      <QueryDemo4/>
+      <QueryDemo/>
+      {/* <QueryDemo4/> */}
       {/* <Routes> */}
         {/* <Route path='/movies' element={<Movies/>}></Route>
           <Route path='/movies/moviedetails/:id' element={<MovieDetails/>}></Route> */}

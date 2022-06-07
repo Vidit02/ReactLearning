@@ -28,6 +28,15 @@ import { QueryDemo } from './stock/QueryDemo';
 import { QueryDemo2 } from './query/QueryDemo2';
 import { QueryDemo3 } from './query/QueryDemo3';
 import { QueryDemo4 } from './query/QueryDemo4';
+import { Demo1 } from './mui/Demo1';
+import Demo2 from './mui/Demo2';
+import { Form } from './exam/Form';
+import { List } from './exam/List';
+import { DeleteArr } from './exam/DeleteArr';
+import { Slider1 } from './mui/Slider1';
+import { Slider2 } from './projecttrials/Slider2';
+import { AOS } from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
   // var name = "Vidit"
@@ -61,6 +70,8 @@ function App() {
   //   alert("this is alert box")
   // }
 
+  const [stud, setstud] = useState(students)
+
   const [tickets, setTickets] = useState([
     {
       name: "Login Bug",
@@ -79,7 +90,6 @@ function App() {
   const addTicket = (ticket) => {
     setTickets([...tickets, ticket])
   }
-
   return (
     <div className="App">
       {/* <AddMovie/> <br></br>
@@ -99,7 +109,18 @@ function App() {
       {/* <QueryDemo2/> */}
       {/* <QueryDemo/> */}
       {/* <QueryDemo3/> */}
-      <QueryDemo/>
+      {/* <QueryDemo/> */}
+      {/* <Demo1/> */}
+      {/* <Demo2/> */}
+
+      <Routes>
+        <Route path='/addbook' element={<Form/>}></Route>
+        <Route path='/listbook' element={<List/>}></Route>
+        <Route path='/deletearr' element={<DeleteArr data={stud} newData={setstud}/>}></Route>
+      </Routes>
+
+      {/* <Slider1/> */}
+      {/* <Slider2/> */}
       {/* <QueryDemo4/> */}
       {/* <Routes> */}
         {/* <Route path='/movies' element={<Movies/>}></Route>

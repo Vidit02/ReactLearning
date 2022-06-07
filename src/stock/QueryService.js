@@ -2,17 +2,16 @@ import axios from "axios"
 import { useQuery } from "react-query"
 
 export function use52WeekHigh(a) {
-    const url = {
+    const web = {
         method: 'GET',
         url: 'https://nse-data1.p.rapidapi.com/near_fifty_two_week_low',
         headers: {
             'X-RapidAPI-Host': 'nse-data1.p.rapidapi.com',
-            'X-RapidAPI-Key': '59308a7a72msh4db3279ac3413a0p130cd1jsn4116260a5abb'
-        }
+            'X-RapidAPI-Key': '0a1e1ac9b1mshcf7a1d186f7ed16p147334jsn2690c7e057a2'
+          }
     }
     return useQuery(["demo1", a], async () => {
-        return await axios(url).then(res => {
-        })
+        return await axios(web)  
     }, {
         enabled: false
     })

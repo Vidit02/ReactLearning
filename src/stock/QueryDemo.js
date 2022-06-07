@@ -5,17 +5,20 @@ export const QueryDemo = () => {
   const [data, setdata] = useState([])
 
   const res = use52WeekHigh("demo1")
-  const res1 = useGetWeather("demo2")
   useEffect(() => {
+    if (res.status === "success") {
+      setdata(res.data.data.body.dataLtpGreater20)
+      console.log(res.data.data.body.dataLtpGreater20);
+    }
     console.log("Thhis is called from demo ", res)
-    // setdata(res.data.body.dataLtpGreater20)
-  }, [res,res1])
-  console.log(res.data);
-  console.log(res1.data)
+    // 00set
+  }, [res.status])
+  // if(res.status === 'success'){
+  //   console.log(res.data);
+  // }
   return (
     <div>
       <button onClick={() => { res.refetch() }}>52 Week High</button>
-      <button onClick={() => { res1.refetch() }}>GEt Weather</button>
       <table class="table table-bordered table-dark">
         <thead>
           <tr>
@@ -28,7 +31,18 @@ export const QueryDemo = () => {
           </tr>
         </thead>
         <tbody>
-
+          {
+            data.map(e => {
+             return ( <tr>
+                <td>{e.symbol}</td>
+                <td>{e.comapnyName}</td>
+                <td>{e.new52WHL}</td>
+                <td>{e.prev52WHL}</td>
+                <td>{e.prevHLDate}</td>
+                <td>{e.change}</td>
+              </tr>)
+            })
+          }
         </tbody>
       </table>
     </div>
